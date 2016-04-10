@@ -33,6 +33,21 @@ public class Testing {
      */
 
     @Test
+    public void test1(){
+        // CGS, MULTIPAIS, INT 2016
+        // ASE,  ValFunII, MON, CV1.5, SONDAS, AUTORI, ATUR, CODIS, ASEapis, TSIMCA, ASEINFRA, JIBX, WS
+        int[] proyectos = {329, 1216, 130, 160, 179, 1220, 465, 500, 1500, 1200, 800, 500, 300};
+        Team[] teams = { new Team(72, 70), new Team(8, 70), new Team(8, 70)};
+
+        // SEGUNDO EN MAYO
+        LocalDate initDate2 = LocalDate.of(2016, Month.MAY, 01);
+
+        LocalDate finishDate = calculateFinishDate(initDate2, 4483, teams[0].calculateEffectiveWorkingHourInADay());
+        System.out.println(finishDate);
+
+    }
+
+    @Test
     public void finaliza_un_proyecto_cuando_no_quedan_horas_por_ejecutar(){
         LocalDate initDate = LocalDate.of(2016, Month.APRIL, 4);
 
